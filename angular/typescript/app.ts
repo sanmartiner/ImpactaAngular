@@ -1,5 +1,1 @@
-let ola = (nome: string) => {
-    console.log("Opa! "+ nome)
-}
-
-ola("Osvaldo")
+let mensagem: string = "Seja bem-vindo!!"
