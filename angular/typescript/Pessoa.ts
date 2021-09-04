@@ -1,33 +1,24 @@
-class Pessoa{
+import Carro from './Carro'
+export default class Pessoa {
     private nome: string
-    private carroPreferido: string
-    private carro:string
+    private carroPreferido: string 
+    private carro!: Carro
 
-    constructor(nome:string, carroPreferido:string, carro:string){
+    constructor(nome: string, carroPreferido: string) {
         this.nome = nome
         this.carroPreferido = carroPreferido
+    }
+
+    public dizerNome(): string {
+        return this.nome
+    }
+    public dizerCarroPreferido(): string {
+        return this.carroPreferido
+    }
+    public comprarCarro(carro: Carro): void {
         this.carro = carro
     }
-
-    public dizerNome(nome:string):void{
-        this.nome = nome
-    }
-
-    public dizerCarroPreferido(carroPreferido:string):void{
-        this.carroPreferido = carroPreferido
-    }
-
-    public comprarCarro(carro: string): boolean{
-        if(carro == this.carroPreferido){
-            return true
-        } else {
-            return false
-        }
-
-    } 
-
-    public dizerCarroQueTem(): string{
-        return
-
+    public dizerCarroQueTem(): Carro {
+        return this.carro
     }
 }
